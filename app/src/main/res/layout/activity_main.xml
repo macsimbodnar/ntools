@@ -6,17 +6,230 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <android.widget.TextClock
-        android:id="@+id/num_date_time"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:format12Hour="@null"
-        android:format24Hour="EEE MMM   dd/MM/yyyy   k:mm:ss"
-        android:textStyle="bold"
-        android:timeZone="GMT+0000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.widget.TextClock
+                android:id="@+id/num_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:format12Hour="@null"
+                android:format24Hour="EEE MMM   dd/MM/yyyy   k:mm:ss"
+                android:textStyle="bold"
+                android:timeZone="GMT+0000"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/months"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:stretchColumns="*"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TableRow>
+
+                    <TextView android:text="1" />
+
+                    <TextView android:text="Gennaio" />
+
+                    <TextView android:text="January" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="2" />
+
+                    <TextView android:text="Febbraio" />
+
+                    <TextView android:text="February" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="3" />
+
+                    <TextView android:text="Marzo" />
+
+                    <TextView android:text="March" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="4" />
+
+                    <TextView android:text="Aprile" />
+
+                    <TextView android:text="April" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="5" />
+
+                    <TextView android:text="Maggio" />
+
+                    <TextView android:text="May" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="6" />
+
+                    <TextView android:text="Giugno" />
+
+                    <TextView android:text="June" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="7" />
+
+                    <TextView android:text="Luglio" />
+
+                    <TextView android:text="July" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="8" />
+
+                    <TextView android:text="Agosto" />
+
+                    <TextView android:text="August" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="9" />
+
+                    <TextView android:text="Settembre" />
+
+                    <TextView android:text="September" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="10" />
+
+                    <TextView android:text="Ottobre" />
+
+                    <TextView android:text="October" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="11" />
+
+                    <TextView android:text="Novembre" />
+
+                    <TextView android:text="November" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        android:visibility="visible" />
+
+                    <TextView android:text="Dicembre" />
+
+                    <TextView android:text="December" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/days"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TableRow>
+
+                    <TextView android:text="Lunedì" />
+
+                    <TextView android:text="Monday" />
+
+                    <TextView android:text="Mon" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="Martedì" />
+
+                    <TextView android:text="Tuesday" />
+
+                    <TextView android:text="Tue/Tues" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="Mercoledì" />
+
+                    <TextView android:text="Wednesday" />
+
+                    <TextView android:text="Wed" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="Giovedì" />
+
+                    <TextView android:text="Thursday" />
+
+                    <TextView android:text="Thu/Thurs" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="Venerdì" />
+
+                    <TextView android:text="Friday" />
+
+                    <TextView android:text="Fri" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="Sabato" />
+
+                    <TextView android:text="Saturday" />
+
+                    <TextView android:text="Sat" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="Domenica" />
+
+                    <TextView android:text="Sunday" />
+
+                    <TextView android:text="Sun" />
+                </TableRow>
+
+            </TableLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
